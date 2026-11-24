@@ -5,7 +5,7 @@
 CHIKZING is a Restaurant Table Booking Website designed to provide users with a simple and convenient way to explore a restaurant and book tables online.
 
 The project focuses on creating an attractive and user-friendly restaurant website with a clean interface and easy navigation.
-
+ https://aminafaiza.github.io/Restaurant-Table-Booking/
 ## ✨ Features
 
 - Attractive restaurant website interface
