@@ -1,0 +1,4275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ChikZing | Flavours That Hit Different</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root{
+    --orange:#ff6b00;
+    --orange-dark:#d94f00;
+    --yellow:#ffb703;
+    --red:#e63946;
+    --dark:#111111;
+    --dark2:#1c1c1c;
+    --cream:#fff8ed;
+    --light:#fffaf3;
+    --text:#292929;
+    --muted:#777;
+    --white:#fff;
+    --green:#198754;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--text);
+    background:#fff;
+    overflow-x:hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family:"Playfair Display",serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+.section-padding{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title span{
+    color:var(--orange);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.section-title h2{
+    font-size:44px;
+    margin-top:10px;
+}
+
+.gold{
+    color:var(--orange);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    background:rgba(15,15,15,.96);
+    padding:13px 0;
+    transition:.3s;
+    z-index:1000;
+}
+
+.navbar-brand{
+    color:#fff!important;
+    font-family:"Playfair Display",serif;
+    font-size:29px;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.navbar-brand .logo-icon{
+    width:40px;
+    height:40px;
+    background:linear-gradient(135deg,var(--orange),var(--yellow));
+    color:#111;
+    border-radius:12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    transform:rotate(-5deg);
+    font-size:21px;
+}
+
+.navbar-brand span{
+    color:var(--orange);
+}
+
+.navbar .nav-link{
+    color:#eee!important;
+    margin:0 6px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar .nav-link:hover{
+    color:var(--orange)!important;
+}
+
+.nav-book-btn{
+    background:var(--orange);
+    color:#fff!important;
+    padding:10px 20px!important;
+    border-radius:30px;
+}
+
+.nav-book-btn:hover{
+    background:var(--orange-dark);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.86),
+        rgba(0,0,0,.48),
+        rgba(0,0,0,.25)
+    ),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    color:#fff;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:auto 0 0 0;
+    height:150px;
+    background:linear-gradient(transparent,#fff);
+}
+
+.hero-content{
+    max-width:780px;
+    position:relative;
+    z-index:2;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,107,0,.16);
+    border:1px solid rgba(255,179,3,.55);
+    padding:9px 17px;
+    border-radius:50px;
+    color:#ffd166;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:clamp(52px,7vw,88px);
+    line-height:1;
+    margin:25px 0;
+}
+
+.hero h1 span{
+    color:#ff9f1c;
+}
+
+.hero p{
+    font-size:18px;
+    color:#eee;
+    max-width:650px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.btn-orange{
+    background:linear-gradient(135deg,var(--orange),#ff8c00);
+    color:#fff;
+    border:none;
+    padding:14px 28px;
+    border-radius:35px;
+    font-weight:800;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(255,107,0,.25);
+}
+
+.btn-orange:hover{
+    background:var(--orange-dark);
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+.btn-outline-custom{
+    border:1px solid #fff;
+    color:#fff;
+    padding:13px 28px;
+    border-radius:35px;
+    font-weight:700;
+}
+
+.btn-outline-custom:hover{
+    background:#fff;
+    color:#111;
+}
+
+.hero-mini-card{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.hero-mini-card .mini{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    padding:12px 17px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.hero-mini-card strong{
+    color:#ffd166;
+}
+
+
+/* =========================================================
+   QUICK INFO
+========================================================= */
+
+.quick-info{
+    background:var(--dark);
+    color:#fff;
+    padding:25px 0;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.info-item i{
+    color:var(--orange);
+    font-size:29px;
+}
+
+.info-item small{
+    color:#aaa;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section{
+    background:#fff;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.experience-box{
+    position:absolute;
+    bottom:25px;
+    right:-20px;
+    background:linear-gradient(135deg,var(--orange),#ff9f1c);
+    color:#fff;
+    padding:25px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(255,107,0,.35);
+}
+
+.experience-box h2{
+    font-size:42px;
+    margin:0;
+}
+
+.about-content h2{
+    font-size:45px;
+}
+
+.about-content p{
+    line-height:1.8;
+    color:#666;
+}
+
+.check-list{
+    list-style:none;
+    padding:0;
+}
+
+.check-list li{
+    margin:14px 0;
+    font-weight:600;
+}
+
+.check-list i{
+    color:var(--orange);
+    margin-right:9px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section{
+    background:var(--cream);
+}
+
+.stat-card{
+    padding:25px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-7px);
+    background:#fff;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.stat-number{
+    font-size:45px;
+    color:var(--orange);
+    font-weight:800;
+    font-family:"Playfair Display",serif;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-section{
+    background:#fff;
+}
+
+.category-btn{
+    border:1px solid #ddd;
+    background:#fff;
+    padding:10px 22px;
+    border-radius:30px;
+    margin:5px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.category-btn:hover,
+.category-btn.active{
+    background:var(--orange);
+    color:#fff;
+    border-color:var(--orange);
+}
+
+.food-card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    transition:.35s;
+    height:100%;
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(255,107,0,.18);
+}
+
+.food-image-wrapper{
+    position:relative;
+    overflow:hidden;
+}
+
+.food-card img{
+    height:245px;
+    width:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.food-card:hover img{
+    transform:scale(1.08);
+}
+
+.food-badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#fff;
+    color:var(--orange);
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.food-card-body{
+    padding:22px;
+}
+
+.food-card h4{
+    margin-bottom:8px;
+    font-size:22px;
+}
+
+.food-description{
+    color:#777;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.price{
+    color:var(--orange);
+    font-size:21px;
+    font-weight:800;
+}
+
+.must-try{
+    background:#fff0dd;
+    color:#d95b00;
+    font-size:11px;
+    padding:5px 9px;
+    border-radius:20px;
+    font-weight:800;
+}
+
+
+/* =========================================================
+   CHEF SPECIAL
+========================================================= */
+
+.special-section{
+    background:
+    linear-gradient(100deg,rgba(17,17,17,.96),rgba(17,17,17,.65)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=90");
+
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.special-content{
+    max-width:700px;
+}
+
+.special-content h2{
+    font-size:52px;
+}
+
+.special-content span{
+    color:#ffb703;
+    letter-spacing:3px;
+    font-weight:800;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:.4s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.025);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.testimonial-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    height:100%;
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-6px);
+}
+
+.stars{
+    color:#ffb703;
+    letter-spacing:3px;
+}
+
+.customer{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+.customer img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section{
+    background:var(--cream);
+}
+
+.contact-card{
+    background:#fff;
+    padding:32px;
+    border-radius:20px;
+    height:100%;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:27px;
+}
+
+.contact-item i{
+    color:var(--orange);
+    font-size:26px;
+}
+
+.contact-item p{
+    margin:0;
+    color:#777;
+}
+
+.form-control,
+.form-select{
+    padding:13px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:var(--orange);
+    box-shadow:0 0 0 .2rem rgba(255,107,0,.12);
+}
+
+
+/* =========================================================
+   AUTH
+========================================================= */
+
+.auth-page{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.78)),
+    url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1800&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.auth-card{
+    width:100%;
+    max-width:450px;
+    background:#fff;
+    border-radius:25px;
+    padding:42px;
+    box-shadow:0 25px 70px rgba(0,0,0,.35);
+}
+
+.auth-logo{
+    text-align:center;
+    font-family:"Playfair Display",serif;
+    font-size:35px;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.auth-logo span{
+    color:var(--orange);
+}
+
+.error{
+    color:var(--red);
+    text-align:center;
+    margin-top:12px;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+#dashboard,
+#confirmationPage{
+    display:none;
+}
+
+.dashboard-nav{
+    background:#111;
+    color:#fff;
+    padding:17px 0;
+}
+
+.dashboard-brand{
+    font-family:"Playfair Display",serif;
+    font-size:27px;
+    font-weight:800;
+}
+
+.dashboard-brand span{
+    color:var(--orange);
+}
+
+.dashboard-main{
+    background:#f7f7f7;
+    min-height:calc(100vh - 70px);
+    padding:45px 0;
+}
+
+.dashboard-stat{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.dashboard-stat i{
+    color:var(--orange);
+    font-size:30px;
+}
+
+.dashboard-stat h2{
+    font-family:"DM Sans",sans-serif;
+    font-weight:800;
+    margin-top:10px;
+}
+
+.table-card{
+    background:#fff;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    height:100%;
+    transition:.3s;
+    border-top:4px solid var(--orange);
+}
+
+.table-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.table-icon{
+    width:65px;
+    height:65px;
+    background:#fff0dd;
+    color:var(--orange);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.available{
+    color:var(--green);
+    font-weight:800;
+}
+
+.booked{
+    color:var(--red);
+    font-weight:800;
+}
+
+.capacity{
+    color:#777;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   CONFIRMATION
+========================================================= */
+
+#confirmationPage{
+    min-height:100vh;
+    align-items:center;
+    justify-content:center;
+    background:#f7f7f7;
+    padding:30px;
+}
+
+.confirm-box{
+    width:100%;
+    max-width:570px;
+    background:#fff;
+    padding:45px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 20px 55px rgba(0,0,0,.12);
+}
+
+.success-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    font-size:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto auto 20px;
+}
+
+.booking-summary{
+    background:#fff8ed;
+    border-radius:15px;
+    padding:20px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#111;
+    color:#aaa;
+    padding:65px 0 25px;
+}
+
+footer h4,
+footer h5{
+    color:#fff;
+}
+
+.footer-logo{
+    font-family:"Playfair Display",serif;
+    font-size:32px;
+    color:#fff;
+    font-weight:800;
+}
+
+.footer-logo span{
+    color:var(--orange);
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin:11px 0;
+}
+
+.footer-links a{
+    color:#aaa;
+}
+
+.footer-links a:hover{
+    color:var(--orange);
+}
+
+.social-icon{
+    width:42px;
+    height:42px;
+    border:1px solid #555;
+    color:#fff;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    margin-right:6px;
+    transition:.3s;
+}
+
+.social-icon:hover{
+    background:var(--orange);
+    border-color:var(--orange);
+}
+
+.footer-bottom{
+    border-top:1px solid #333;
+    margin-top:40px;
+    padding-top:20px;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+#backToTop{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:48px;
+    height:48px;
+    border:none;
+    background:var(--orange);
+    color:#fff;
+    border-radius:50%;
+    display:none;
+    z-index:999;
+    box-shadow:0 8px 25px rgba(255,107,0,.35);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .section-padding{
+        padding:65px 0;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .hero{
+        min-height:850px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero-mini-card{
+        flex-wrap:wrap;
+    }
+
+    .about-content h2{
+        font-size:35px;
+        margin-top:35px;
+    }
+
+    .experience-box{
+        right:15px;
+    }
+
+    .special-content h2{
+        font-size:40px;
+    }
+
+    .auth-card{
+        padding:30px;
+    }
+
+    .confirm-box{
+        padding:30px 22px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     MAIN WEBSITE
+========================================================= -->
+
+<div id="mainWebsite">
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#home">
+
+<span class="logo-icon">
+<i class="bi bi-fire"></i>
+</span>
+
+Chik<span>Zing</span>
+
+</a>
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#mainNavbar">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="mainNavbar">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#menu">Menu</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#gallery">Gallery</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+<li class="nav-item ms-lg-2">
+<a class="nav-link nav-book-btn" href="#booking">
+<i class="bi bi-calendar-check"></i>
+Book Table
+</a>
+</li>
+
+<li class="nav-item ms-lg-2">
+<a class="nav-link" href="#" id="loginNavBtn">
+Login
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+<i class="bi bi-fire"></i>
+Fresh • Hot • Irresistible
+</div>
+
+<h1>
+Flavours That
+<span>Hit Different.</span>
+</h1>
+
+<p>
+Welcome to ChikZing — where crispy bites, juicy grills,
+flavour-packed biriyanis and irresistible desserts come together
+for one unforgettable dining experience.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#menu" class="btn btn-orange me-2">
+<i class="bi bi-egg-fried"></i>
+Explore Menu
+</a>
+
+<a href="#booking" class="btn btn-outline-custom">
+<i class="bi bi-calendar-check"></i>
+Book Your Table
+</a>
+
+</div>
+
+<div class="hero-mini-card">
+
+<div class="mini">
+<i class="bi bi-star-fill text-warning"></i>
+<strong>4.9/5</strong>
+<br>
+<small>Guest Rating</small>
+</div>
+
+<div class="mini">
+<i class="bi bi-fire text-danger"></i>
+<strong>Chef's Pick</strong>
+<br>
+<small>Daily Specials</small>
+</div>
+
+<div class="mini">
+<i class="bi bi-clock text-warning"></i>
+<strong>11 AM – 11 PM</strong>
+<br>
+<small>Open Daily</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK INFO -->
+
+<section class="quick-info">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="info-item">
+
+<i class="bi bi-clock"></i>
+
+<div>
+<strong>Open Every Day</strong>
+<br>
+<small>11:00 AM – 11:00 PM</small>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="info-item">
+
+<i class="bi bi-geo-alt"></i>
+
+<div>
+<strong>Visit ChikZing</strong>
+<br>
+<small>MG Road, Kochi, Kerala</small>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="info-item">
+
+<i class="bi bi-telephone"></i>
+
+<div>
+<strong>Call Us</strong>
+<br>
+<small>+91 98765 43210</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section-padding about-section" id="about">
+
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6">
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=90"
+alt="ChikZing restaurant">
+
+<div class="experience-box">
+
+<h2>10+</h2>
+
+<small>Years of Flavour</small>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-6">
+
+<div class="about-content">
+
+<span class="gold fw-bold text-uppercase">
+Why ChikZing?
+</span>
+
+<h2 class="mt-2">
+Big Flavour.
+Bold Attitude.
+Zero Boring Bites.
+</h2>
+
+<p>
+At ChikZing, we believe great food should make you stop,
+smile and say "one more!"
+</p>
+
+<p>
+From smoky grills to aromatic biriyanis, every dish is prepared
+with quality ingredients, bold spices and a whole lot of passion.
+</p>
+
+<ul class="check-list">
+
+<li>
+<i class="bi bi-check-circle-fill"></i>
+Fresh ingredients every day
+</li>
+
+<li>
+<i class="bi bi-check-circle-fill"></i>
+Chef-crafted signature dishes
+</li>
+
+<li>
+<i class="bi bi-check-circle-fill"></i>
+Family-friendly dining experience
+</li>
+
+<li>
+<i class="bi bi-check-circle-fill"></i>
+Fast, friendly service
+</li>
+
+</ul>
+
+<a href="#menu" class="btn btn-orange mt-3">
+Taste The Difference
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="section-padding stats-section">
+
+<div class="container">
+
+<div class="row text-center g-4">
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<div class="stat-number">10+</div>
+
+<p>Years of Flavour</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<div class="stat-number">50+</div>
+
+<p>Signature Dishes</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<div class="stat-number">25K+</div>
+
+<p>Happy Guests</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<div class="stat-number">4.9</div>
+
+<p>Guest Rating</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="section-padding menu-section" id="menu">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Our Menu</span>
+
+<h2>Cravings Start Here.</h2>
+
+<p class="text-muted">
+Warning: choosing only one dish may be impossible.
+</p>
+
+</div>
+
+
+<div class="text-center mb-5">
+
+<button class="category-btn active" data-category="all">
+All
+</button>
+
+<button class="category-btn" data-category="starter">
+Starters
+</button>
+
+<button class="category-btn" data-category="main">
+Main Course
+</button>
+
+<button class="category-btn" data-category="biryani">
+Biriyani
+</button>
+
+<button class="category-btn" data-category="dessert">
+Desserts
+</button>
+
+</div>
+
+
+<div class="row g-4" id="foodContainer">
+
+
+<!-- FOOD 1 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="starter">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=90"
+alt="Crispy Chicken Wings">
+
+<span class="food-badge">
+<i class="bi bi-fire"></i> BEST SELLER
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<div class="d-flex justify-content-between">
+
+<h4>Fire Chicken Wings</h4>
+
+<span class="must-try">
+MUST TRY
+</span>
+
+</div>
+
+<p class="food-description">
+Crispy, juicy chicken tossed in our signature spicy glaze.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹320</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="Fire Chicken Wings">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 2 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="starter">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=900&q=90"
+alt="Chicken Tikka">
+
+<span class="food-badge">
+CHEF'S PICK
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<h4>Smoky Chicken Tikka</h4>
+
+<p class="food-description">
+Tender chicken marinated overnight with aromatic spices and grilled.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹340</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="Smoky Chicken Tikka">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 3 - FIXED BIRIYANI IMAGE -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="biryani">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=90"
+alt="Chicken Biriyani">
+
+<span class="food-badge">
+<i class="bi bi-fire"></i> POPULAR
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<div class="d-flex justify-content-between">
+
+<h4>ChikZing Biriyani</h4>
+
+<span class="must-try">
+MUST TRY
+</span>
+
+</div>
+
+<p class="food-description">
+Fragrant basmati rice, tender chicken, caramelised onions and secret spices.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹390</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="ChikZing Biriyani">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 4 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="main">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=90"
+alt="Butter Chicken">
+
+<span class="food-badge">
+CREAMY FAVOURITE
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<h4>Butter Chicken</h4>
+
+<p class="food-description">
+Tender chicken in a rich tomato-butter sauce with aromatic spices.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹360</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="Butter Chicken">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 5 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="main">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=90"
+alt="Special Pizza">
+
+<span class="food-badge">
+CROWD FAVOURITE
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<h4>ChikZing Loaded Pizza</h4>
+
+<p class="food-description">
+Cheesy, crispy and loaded with fresh toppings and our special sauce.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹440</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="ChikZing Loaded Pizza">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 6 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="main">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=90"
+alt="Grilled Chicken">
+
+<span class="food-badge">
+HIGH PROTEIN
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<h4>Royal Grilled Chicken</h4>
+
+<p class="food-description">
+Juicy grilled chicken served with fresh vegetables and signature sauce.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹420</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="Royal Grilled Chicken">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 7 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="starter">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=90"
+alt="Crispy Chicken">
+
+<span class="food-badge">
+CRISPY
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<h4>Crispy Zing Chicken</h4>
+
+<p class="food-description">
+Golden crispy chicken bites coated with our spicy ChikZing seasoning.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹299</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="Crispy Zing Chicken">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 8 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="dessert">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=90"
+alt="Chocolate Dessert">
+
+<span class="food-badge">
+SWEET ENDING
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<h4>Choco Lava Dream</h4>
+
+<p class="food-description">
+Warm chocolate cake with a molten centre and creamy vanilla ice cream.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹240</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="Choco Lava Dream">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOD 9 -->
+
+<div class="col-md-6 col-lg-4 food-item"
+data-category="dessert">
+
+<div class="food-card">
+
+<div class="food-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=90"
+alt="Dessert">
+
+<span class="food-badge">
+NEW
+</span>
+
+</div>
+
+<div class="food-card-body">
+
+<h4>Berry Cream Delight</h4>
+
+<p class="food-description">
+Layers of soft cream, fresh berries and a delicate sweet crumble.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">₹220</span>
+
+<button
+class="btn btn-sm btn-outline-dark add-order"
+data-food="Berry Cream Delight">
+
+<i class="bi bi-plus-lg"></i>
+Add
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="text-center mt-5">
+
+<div id="orderSelection"
+class="alert alert-warning d-none">
+
+<i class="bi bi-bag-heart-fill"></i>
+
+<span id="orderText"></span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SPECIAL -->
+
+<section class="section-padding special-section">
+
+<div class="container">
+
+<div class="special-content">
+
+<span>
+🔥 CHIKZING SPECIAL
+</span>
+
+<h2 class="mt-3">
+The Weekend Feast
+</h2>
+
+<p class="lead">
+Bring your favourite people. Pick your favourite dishes.
+Let us handle the flavour.
+</p>
+
+<p>
+Enjoy our signature biriyani, sizzling starters and irresistible
+desserts during our weekend dining experience.
+</p>
+
+<a href="#booking" class="btn btn-orange mt-3">
+Reserve Your Table
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="section-padding" id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Our Vibe</span>
+
+<h2>Come Hungry. Leave Happy.</h2>
+
+</div>
+
+<div class="row g-3">
+
+<div class="col-md-4">
+<img class="gallery-img"
+src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=90"
+alt="Restaurant interior">
+</div>
+
+<div class="col-md-4">
+<img class="gallery-img"
+src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=90"
+alt="Restaurant dining">
+</div>
+
+<div class="col-md-4">
+<img class="gallery-img"
+src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=90"
+alt="Restaurant food">
+</div>
+
+<div class="col-md-4">
+<img class="gallery-img"
+src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=90"
+alt="Fine dining">
+</div>
+
+<div class="col-md-4">
+<img class="gallery-img"
+src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=90"
+alt="Fresh food">
+</div>
+
+<!-- FIXED BIRIYANI GALLERY IMAGE -->
+
+<div class="col-md-4">
+<img class="gallery-img"
+src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=90"
+alt="Biriyani">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section class="section-padding stats-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Guest Love</span>
+
+<h2>People Are Talking About ChikZing</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<div class="stars">★★★★★</div>
+
+<p class="mt-3">
+"The ChikZing biriyani is absolutely amazing.
+The flavours are rich and the chicken was perfectly cooked."
+</p>
+
+<div class="customer">
+
+<img src="https://i.pravatar.cc/100?img=12"
+alt="Customer">
+
+<div>
+<strong>Rahul Menon</strong>
+<br>
+<small class="text-muted">Food Lover</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<div class="stars">★★★★★</div>
+
+<p class="mt-3">
+"Beautiful ambience, friendly staff and the chicken starters
+were honestly the highlight of our dinner."
+</p>
+
+<div class="customer">
+
+<img src="https://i.pravatar.cc/100?img=32"
+alt="Customer">
+
+<div>
+<strong>Sarah Thomas</strong>
+<br>
+<small class="text-muted">Regular Guest</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+<div class="stars">★★★★★</div>
+
+<p class="mt-3">
+"Great place for family dinners. The food presentation,
+taste and service were excellent."
+</p>
+
+<div class="customer">
+
+<img src="https://i.pravatar.cc/100?img=45"
+alt="Customer">
+
+<div>
+<strong>Arjun Kumar</strong>
+<br>
+<small class="text-muted">Family Guest</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section-padding contact-section" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Contact</span>
+
+<h2>Let's Talk Food.</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-5">
+
+<div class="contact-card">
+
+<h3 class="mb-4">
+Visit ChikZing
+</h3>
+
+<div class="contact-item">
+
+<i class="bi bi-geo-alt"></i>
+
+<div>
+<h6>Address</h6>
+<p>MG Road, Kochi,<br>Kerala, India</p>
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="bi bi-telephone"></i>
+
+<div>
+<h6>Phone</h6>
+<p>+91 98765 43210</p>
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="bi bi-envelope"></i>
+
+<div>
+<h6>Email</h6>
+<p>hello@chikzing.com</p>
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="bi bi-clock"></i>
+
+<div>
+<h6>Opening Hours</h6>
+<p>Monday – Sunday<br>11:00 AM – 11:00 PM</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-7">
+
+<div class="contact-card">
+
+<h3 class="mb-4">
+Send Us A Message
+</h3>
+
+<form id="contactForm">
+
+<div class="row g-3">
+
+<div class="col-md-6">
+
+<input
+type="text"
+id="contactName"
+class="form-control"
+placeholder="Your Name"
+required>
+
+</div>
+
+<div class="col-md-6">
+
+<input
+type="email"
+id="contactEmail"
+class="form-control"
+placeholder="Email Address"
+required>
+
+</div>
+
+<div class="col-12">
+
+<input
+type="text"
+class="form-control"
+placeholder="Subject"
+required>
+
+</div>
+
+<div class="col-12">
+
+<textarea
+class="form-control"
+rows="6"
+placeholder="Tell us what you're craving..."
+required></textarea>
+
+</div>
+
+<div class="col-12">
+
+<button
+type="submit"
+class="btn btn-orange">
+
+<i class="bi bi-send"></i>
+Send Message
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING CTA -->
+
+<section class="section-padding text-center" id="booking">
+
+<div class="container">
+
+<span class="gold fw-bold">
+RESERVATIONS
+</span>
+
+<h2 class="display-5 mt-2">
+Your Table Is Waiting.
+</h2>
+
+<p class="text-muted">
+Login or create an account to reserve your favourite table.
+</p>
+
+<button
+class="btn btn-orange mt-3"
+id="bookingLoginBtn">
+
+<i class="bi bi-calendar-heart"></i>
+Reserve My Table
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="row g-5">
+
+<div class="col-lg-4">
+
+<div class="footer-logo">
+Chik<span>Zing</span>
+</div>
+
+<p class="mt-3">
+Bold flavours. Crispy bites. Juicy grills.
+And memories worth repeating.
+</p>
+
+<div class="mt-4">
+
+<a href="#" class="social-icon">
+<i class="bi bi-facebook"></i>
+</a>
+
+<a href="#" class="social-icon">
+<i class="bi bi-instagram"></i>
+</a>
+
+<a href="#" class="social-icon">
+<i class="bi bi-twitter-x"></i>
+</a>
+
+<a href="#" class="social-icon">
+<i class="bi bi-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-2 col-md-4">
+
+<h5>Explore</h5>
+
+<ul class="footer-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-3 col-md-4">
+
+<h5>Contact</h5>
+
+<p>
+<i class="bi bi-geo-alt gold"></i>
+MG Road, Kochi
+</p>
+
+<p>
+<i class="bi bi-telephone gold"></i>
++91 98765 43210
+</p>
+
+<p>
+<i class="bi bi-envelope gold"></i>
+hello@chikzing.com
+</p>
+
+</div>
+
+
+<div class="col-lg-3 col-md-4">
+
+<h5>Opening Hours</h5>
+
+<p>
+Monday – Friday<br>
+11:00 AM – 11:00 PM
+</p>
+
+<p>
+Saturday – Sunday<br>
+10:00 AM – 11:30 PM
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom text-center">
+
+<small>
+© 2026 ChikZing Restaurant. All Rights Reserved.
+</small>
+
+</div>
+
+</div>
+
+</footer>
+
+</div>
+
+
+<!-- =========================================================
+     REGISTER PAGE
+========================================================= -->
+
+<div id="registerPage" class="auth-page">
+
+<div class="auth-card">
+
+<div class="auth-logo">
+<i class="bi bi-fire gold"></i>
+Chik<span>Zing</span>
+</div>
+
+<h3 class="text-center mb-2">
+Create Your Account
+</h3>
+
+<p class="text-center text-muted mb-4">
+Join ChikZing and book your favourite table.
+</p>
+
+<form id="registerForm">
+
+<div class="mb-3">
+
+<label class="form-label">
+Username
+</label>
+
+<input
+type="text"
+id="regUsername"
+class="form-control"
+placeholder="Enter username"
+minlength="3"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+Phone Number
+</label>
+
+<input
+type="tel"
+id="regPhone"
+class="form-control"
+placeholder="10 digit phone number"
+maxlength="10"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+Password
+</label>
+
+<input
+type="password"
+id="regPassword"
+class="form-control"
+placeholder="Minimum 4 characters"
+minlength="4"
+required>
+
+</div>
+
+<button
+type="submit"
+class="btn btn-orange w-100">
+
+Create Account
+
+</button>
+
+</form>
+
+<p id="regMsg" class="error"></p>
+
+<p class="text-center mt-4">
+
+Already have an account?
+
+<a href="#" id="loginLink" class="gold fw-bold">
+Login
+</a>
+
+</p>
+
+<button
+class="btn btn-link text-muted w-100"
+onclick="showWebsite()">
+
+← Back to ChikZing
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     LOGIN PAGE
+========================================================= -->
+
+<div id="loginPage" class="auth-page">
+
+<div class="auth-card">
+
+<div class="auth-logo">
+<i class="bi bi-fire gold"></i>
+Chik<span>Zing</span>
+</div>
+
+<h3 class="text-center mb-2">
+Welcome Back
+</h3>
+
+<p class="text-center text-muted mb-4">
+Login to manage your reservations.
+</p>
+
+<form id="loginForm">
+
+<div class="mb-3">
+
+<label class="form-label">
+Username
+</label>
+
+<input
+type="text"
+id="userId"
+class="form-control"
+placeholder="Enter username"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+Password
+</label>
+
+<input
+type="password"
+id="password"
+class="form-control"
+placeholder="Enter password"
+required>
+
+</div>
+
+<button
+type="submit"
+class="btn btn-orange w-100">
+
+Login
+
+</button>
+
+</form>
+
+<p id="errorMsg" class="error"></p>
+
+<p class="text-center mt-4">
+
+New to ChikZing?
+
+<a href="#" id="registerLink" class="gold fw-bold">
+Create Account
+</a>
+
+</p>
+
+<button
+class="btn btn-link text-muted w-100"
+onclick="showWebsite()">
+
+← Back to ChikZing
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     DASHBOARD
+========================================================= -->
+
+<div id="dashboard">
+
+<nav class="dashboard-nav">
+
+<div class="container d-flex justify-content-between align-items-center">
+
+<div class="dashboard-brand">
+Chik<span>Zing</span>
+</div>
+
+<div class="d-flex align-items-center gap-3">
+
+<span id="welcomeUser"></span>
+
+<button
+class="btn btn-outline-light btn-sm"
+id="logoutBtn">
+
+Logout
+
+</button>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<div class="dashboard-main">
+
+<div class="container">
+
+<div class="mb-4">
+
+<h1>
+Reservation Dashboard
+</h1>
+
+<p class="text-muted">
+Choose your table and reserve your ChikZing experience.
+</p>
+
+</div>
+
+
+<div class="row g-4 mb-5">
+
+<div class="col-md-4">
+
+<div class="dashboard-stat">
+
+<i class="bi bi-grid-3x3-gap"></i>
+
+<h6 class="text-muted mt-3">
+Total Tables
+</h6>
+
+<h2>
+10
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="dashboard-stat">
+
+<i class="bi bi-check-circle"></i>
+
+<h6 class="text-muted mt-3">
+Available Now
+</h6>
+
+<h2 id="availableTables">
+0
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="dashboard-stat">
+
+<i class="bi bi-calendar-check"></i>
+
+<h6 class="text-muted mt-3">
+My Bookings
+</h6>
+
+<h2 id="bookedTables">
+0
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="mb-4">
+
+<h2>
+Choose Your Table
+</h2>
+
+<p class="text-muted">
+Select a table and choose your date, time and number of guests.
+</p>
+
+</div>
+
+
+<div class="row g-4" id="tableContainer"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     CONFIRMATION
+========================================================= -->
+
+<div id="confirmationPage">
+
+<div class="confirm-box">
+
+<div class="success-icon">
+<i class="bi bi-check-lg"></i>
+</div>
+
+<h1 class="text-success">
+Booking Confirmed!
+</h1>
+
+<p class="text-muted">
+Your ChikZing table has been successfully reserved.
+</p>
+
+<hr>
+
+<div class="booking-summary text-start mt-4">
+
+<p id="confirmTable"></p>
+<p id="confirmUser"></p>
+<p id="confirmGuests"></p>
+<p id="confirmDate"></p>
+<p id="confirmTime"></p>
+<p id="confirmBookingId"></p>
+
+</div>
+
+<button
+class="btn btn-orange w-100 mt-3"
+id="backBtn">
+
+Back To Dashboard
+
+</button>
+
+<button
+class="btn btn-outline-secondary w-100 mt-2"
+onclick="showWebsite()">
+
+Return To Website
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     BOOKING MODAL
+========================================================= -->
+
+<div
+class="modal fade"
+id="bookingModal"
+tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content border-0 shadow-lg">
+
+<div class="modal-header">
+
+<h5 class="modal-title">
+<i class="bi bi-calendar-heart gold"></i>
+Reserve <span id="selectedTableName"></span>
+</h5>
+
+<button
+type="button"
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+
+<div class="modal-body p-4">
+
+<form id="bookingForm">
+
+<div class="mb-3">
+
+<label class="form-label fw-bold">
+Reservation Date
+</label>
+
+<input
+type="date"
+id="bookingDate"
+class="form-control"
+required>
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label fw-bold">
+Reservation Time
+</label>
+
+<select
+id="bookingTime"
+class="form-select"
+required>
+
+<option value="">
+Select time
+</option>
+
+<option>11:00 AM</option>
+<option>12:00 PM</option>
+<option>01:00 PM</option>
+<option>02:00 PM</option>
+<option>05:00 PM</option>
+<option>06:00 PM</option>
+<option>07:00 PM</option>
+<option>08:00 PM</option>
+<option>09:00 PM</option>
+<option>10:00 PM</option>
+
+</select>
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label fw-bold">
+Number of Guests
+</label>
+
+<select
+id="bookingGuests"
+class="form-select"
+required>
+
+<option value="">
+Select guests
+</option>
+
+<option value="1">1 Guest</option>
+<option value="2">2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4 Guests</option>
+<option value="5">5 Guests</option>
+<option value="6">6 Guests</option>
+
+</select>
+
+</div>
+
+<div
+id="bookingError"
+class="alert alert-danger d-none">
+</div>
+
+<button
+type="submit"
+class="btn btn-orange w-100">
+
+<i class="bi bi-check-circle"></i>
+Confirm Reservation
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+<div
+id="liveToast"
+class="toast"
+role="alert">
+
+<div class="toast-header">
+
+<strong class="me-auto">
+<i class="bi bi-fire gold"></i>
+ChikZing
+</strong>
+
+<small>Now</small>
+
+<button
+type="button"
+class="btn-close"
+data-bs-dismiss="toast">
+</button>
+
+</div>
+
+<div
+class="toast-body"
+id="toastMessage">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BACK TO TOP -->
+
+<button id="backToTop">
+
+<i class="bi bi-arrow-up"></i>
+
+</button>
+
+
+<!-- BOOTSTRAP -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* =========================================================
+   INITIAL DATA
+========================================================= */
+
+const defaultUsers = [
+    {
+        id:"admin",
+        phone:"9999999999",
+        password:"1234"
+    }
+];
+
+const defaultTables = [];
+
+for(let tableNumber = 1; tableNumber <= 10; tableNumber++){
+
+    defaultTables.push({
+
+        tableName:`Table ${tableNumber}`,
+
+        capacity:tableNumber <= 6 ? 2 : 4
+
+    });
+
+}
+
+
+/* =========================================================
+   STORAGE HELPERS
+========================================================= */
+
+function getUsers(){
+
+    return JSON.parse(
+        localStorage.getItem("chikzingUsers") || "[]"
+    );
+
+}
+
+function saveUsers(users){
+
+    localStorage.setItem(
+        "chikzingUsers",
+        JSON.stringify(users)
+    );
+
+}
+
+function getBookings(){
+
+    return JSON.parse(
+        localStorage.getItem("chikzingBookings") || "[]"
+    );
+
+}
+
+function saveBookings(bookings){
+
+    localStorage.setItem(
+        "chikzingBookings",
+        JSON.stringify(bookings)
+    );
+
+}
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+if(!localStorage.getItem("chikzingUsers")){
+
+    saveUsers(defaultUsers);
+
+}
+
+if(!localStorage.getItem("chikzingBookings")){
+
+    saveBookings([]);
+
+}
+
+
+/* =========================================================
+   PAGE REFERENCES
+========================================================= */
+
+const mainWebsite =
+document.getElementById("mainWebsite");
+
+const registerPage =
+document.getElementById("registerPage");
+
+const loginPage =
+document.getElementById("loginPage");
+
+const dashboard =
+document.getElementById("dashboard");
+
+const confirmationPage =
+document.getElementById("confirmationPage");
+
+
+/* =========================================================
+   HIDE ALL PAGES
+========================================================= */
+
+function hideAllPages(){
+
+    mainWebsite.style.display = "none";
+    registerPage.style.display = "none";
+    loginPage.style.display = "none";
+    dashboard.style.display = "none";
+    confirmationPage.style.display = "none";
+
+}
+
+
+/* =========================================================
+   SHOW WEBSITE
+========================================================= */
+
+function showWebsite(){
+
+    hideAllPages();
+
+    mainWebsite.style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================================
+   SHOW LOGIN
+========================================================= */
+
+function showLogin(){
+
+    hideAllPages();
+
+    loginPage.style.display = "flex";
+
+    document.getElementById("errorMsg").innerText = "";
+
+}
+
+
+/* =========================================================
+   SHOW REGISTER
+========================================================= */
+
+function showRegister(){
+
+    hideAllPages();
+
+    registerPage.style.display = "flex";
+
+    document.getElementById("regMsg").innerText = "";
+
+}
+
+
+/* =========================================================
+   REGISTER
+========================================================= */
+
+function registerUser(){
+
+    const username =
+    document.getElementById("regUsername")
+    .value.trim();
+
+    const phone =
+    document.getElementById("regPhone")
+    .value.trim();
+
+    const password =
+    document.getElementById("regPassword")
+    .value.trim();
+
+    const message =
+    document.getElementById("regMsg");
+
+    message.innerText = "";
+
+
+    if(username.length < 3){
+
+        message.innerText =
+        "Username must contain at least 3 characters.";
+
+        return;
+
+    }
+
+
+    if(!/^\d{10}$/.test(phone)){
+
+        message.innerText =
+        "Phone number must contain exactly 10 digits.";
+
+        return;
+
+    }
+
+
+    if(password.length < 4){
+
+        message.innerText =
+        "Password must contain at least 4 characters.";
+
+        return;
+
+    }
+
+
+    const users = getUsers();
+
+
+    const exists = users.some(
+        user =>
+        user.id.toLowerCase() === username.toLowerCase()
+    );
+
+
+    if(exists){
+
+        message.innerText =
+        "Username already exists.";
+
+        return;
+
+    }
+
+
+    users.push({
+
+        id:username,
+
+        phone:phone,
+
+        password:password
+
+    });
+
+
+    saveUsers(users);
+
+
+    document
+    .getElementById("registerForm")
+    .reset();
+
+
+    showToast(
+        "Account created successfully! Please login."
+    );
+
+
+    setTimeout(
+        showLogin,
+        900
+    );
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+function login(){
+
+    const username =
+    document.getElementById("userId")
+    .value.trim();
+
+    const password =
+    document.getElementById("password")
+    .value.trim();
+
+    const users = getUsers();
+
+
+    const user = users.find(
+
+        account =>
+
+        account.id.toLowerCase() === username.toLowerCase() &&
+
+        account.password === password
+
+    );
+
+
+    if(!user){
+
+        document.getElementById("errorMsg").innerText =
+        "Invalid username or password.";
+
+        return;
+
+    }
+
+
+    localStorage.setItem(
+        "chikzingCurrentUser",
+        user.id
+    );
+
+
+    document
+    .getElementById("loginForm")
+    .reset();
+
+
+    openDashboard(user.id);
+
+}
+
+
+/* =========================================================
+   OPEN DASHBOARD
+========================================================= */
+
+function openDashboard(username){
+
+    hideAllPages();
+
+    dashboard.style.display = "block";
+
+
+    document.getElementById(
+        "welcomeUser"
+    ).innerHTML =
+    `Welcome, <b>${escapeHTML(username)}</b>`;
+
+
+    loadTables();
+
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value){
+
+    return String(value)
+
+        .replaceAll("&","&amp;")
+
+        .replaceAll("<","&lt;")
+
+        .replaceAll(">","&gt;")
+
+        .replaceAll('"',"&quot;")
+
+        .replaceAll("'","&#039;");
+
+}
+
+
+/* =========================================================
+   CHECK TABLE AVAILABILITY
+========================================================= */
+
+function tableIsAvailable(
+    tableName,
+    date,
+    time
+){
+
+    const bookings = getBookings();
+
+
+    return !bookings.some(
+
+        booking =>
+
+        booking.tableName === tableName &&
+
+        booking.date === date &&
+
+        booking.time === time
+
+    );
+
+}
+
+
+/* =========================================================
+   LOAD TABLES
+========================================================= */
+
+function loadTables(){
+
+    const currentUser =
+    localStorage.getItem(
+        "chikzingCurrentUser"
+    );
+
+
+    const bookings = getBookings();
+
+
+    const container =
+    document.getElementById(
+        "tableContainer"
+    );
+
+
+    let html = "";
+
+
+    defaultTables.forEach(
+        (table,index) => {
+
+            const myBookings =
+            bookings.filter(
+                booking =>
+                booking.username === currentUser &&
+                booking.tableName === table.tableName
+            );
+
+
+            html += `
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="table-card">
+
+                    <div class="table-icon">
+
+                        <i class="bi bi-table"></i>
+
+                    </div>
+
+                    <h4>
+                        ${table.tableName}
+                    </h4>
+
+                    <p class="capacity">
+
+                        <i class="bi bi-people"></i>
+
+                        Capacity:
+                        ${table.capacity}
+                        guests
+
+                    </p>
+
+                    <p class="available">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Available for your selected time
+
+                    </p>
+
+                    ${
+                        myBookings.length > 0
+
+                        ?
+
+                        `
+
+                        <div class="small bg-light p-3 rounded mb-3">
+
+                            <strong>Your bookings:</strong>
+
+                            <br>
+
+                            ${myBookings.map(
+                                booking => `
+
+                                <div class="mt-2">
+
+                                    ${escapeHTML(booking.date)}
+                                    -
+                                    ${escapeHTML(booking.time)}
+
+                                    <br>
+
+                                    <small>
+                                    Booking ID:
+                                    ${escapeHTML(booking.bookingId)}
+                                    </small>
+
+                                    <button
+                                    class="btn btn-sm btn-outline-danger mt-2 cancel-booking"
+                                    data-id="${booking.bookingId}">
+
+                                    Cancel
+
+                                    </button>
+
+                                </div>
+
+                                `
+                            ).join("")}
+
+                        </div>
+
+                        `
+
+                        :
+
+                        ""
+
+                    }
+
+
+                    <button
+
+                    class="btn btn-orange w-100 book-table"
+
+                    data-index="${index}">
+
+                    <i class="bi bi-calendar-plus"></i>
+
+                    Book This Table
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            `;
+
+        }
+    );
+
+
+    container.innerHTML = html;
+
+
+    updateDashboardStats();
+
+
+    document
+    .querySelectorAll(".book-table")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                openBookingModal(
+                    Number(this.dataset.index)
+                );
+
+            }
+        );
+
+    });
+
+
+    document
+    .querySelectorAll(".cancel-booking")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                cancelBooking(
+                    this.dataset.id
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   DASHBOARD STATISTICS
+========================================================= */
+
+function updateDashboardStats(){
+
+    const currentUser =
+    localStorage.getItem(
+        "chikzingCurrentUser"
+    );
+
+
+    const bookings = getBookings();
+
+
+    const myBookings =
+    bookings.filter(
+        booking =>
+        booking.username === currentUser
+    );
+
+
+    document.getElementById(
+        "bookedTables"
+    ).innerText =
+    myBookings.length;
+
+
+    document.getElementById(
+        "availableTables"
+    ).innerText =
+    defaultTables.length;
+
+}
+
+
+/* =========================================================
+   BOOKING MODAL
+========================================================= */
+
+let selectedTableIndex = null;
+
+
+function openBookingModal(index){
+
+    selectedTableIndex = index;
+
+
+    const table =
+    defaultTables[index];
+
+
+    document.getElementById(
+        "selectedTableName"
+    ).innerText =
+    table.tableName;
+
+
+    const today =
+    new Date();
+
+
+    const year =
+    today.getFullYear();
+
+    const month =
+    String(today.getMonth()+1)
+    .padStart(2,"0");
+
+    const day =
+    String(today.getDate())
+    .padStart(2,"0");
+
+
+    const todayString =
+    `${year}-${month}-${day}`;
+
+
+    document.getElementById(
+        "bookingDate"
+    ).min =
+    todayString;
+
+
+    document.getElementById(
+        "bookingDate"
+    ).value =
+    todayString;
+
+
+    document.getElementById(
+        "bookingTime"
+    ).value = "";
+
+
+    document.getElementById(
+        "bookingGuests"
+    ).value = "";
+
+
+    document.getElementById(
+        "bookingError"
+    ).classList.add("d-none");
+
+
+    const modal =
+    new bootstrap.Modal(
+        document.getElementById(
+            "bookingModal"
+        )
+    );
+
+
+    modal.show();
+
+}
+
+
+/* =========================================================
+   CONFIRM BOOKING
+========================================================= */
+
+function confirmBooking(){
+
+    const table =
+    defaultTables[selectedTableIndex];
+
+
+    const currentUser =
+    localStorage.getItem(
+        "chikzingCurrentUser"
+    );
+
+
+    const date =
+    document.getElementById(
+        "bookingDate"
+    ).value;
+
+
+    const time =
+    document.getElementById(
+        "bookingTime"
+    ).value;
+
+
+    const guests =
+    Number(
+        document.getElementById(
+            "bookingGuests"
+        ).value
+    );
+
+
+    const errorBox =
+    document.getElementById(
+        "bookingError"
+    );
+
+
+    errorBox.classList.add("d-none");
+
+
+    if(!date || !time || !guests){
+
+        errorBox.innerText =
+        "Please complete all booking details.";
+
+        errorBox.classList.remove("d-none");
+
+        return;
+
+    }
+
+
+    if(guests > table.capacity){
+
+        errorBox.innerText =
+        `${table.tableName} can accommodate only ${table.capacity} guests.`;
+
+        errorBox.classList.remove("d-none");
+
+        return;
+
+    }
+
+
+    if(
+        !tableIsAvailable(
+            table.tableName,
+            date,
+            time
+        )
+    ){
+
+        errorBox.innerText =
+        "This table is already booked for the selected date and time. Please choose another time or table.";
+
+        errorBox.classList.remove("d-none");
+
+        return;
+
+    }
+
+
+    const bookingId =
+    "CZ" +
+    Date.now().toString().slice(-8);
+
+
+    const bookings = getBookings();
+
+
+    bookings.push({
+
+        bookingId:bookingId,
+
+        username:currentUser,
+
+        tableName:table.tableName,
+
+        capacity:table.capacity,
+
+        guests:guests,
+
+        date:date,
+
+        time:time,
+
+        createdAt:new Date().toISOString()
+
+    });
+
+
+    saveBookings(bookings);
+
+
+    const modalElement =
+    document.getElementById(
+        "bookingModal"
+    );
+
+
+    const modal =
+    bootstrap.Modal.getInstance(
+        modalElement
+    );
+
+
+    if(modal){
+        modal.hide();
+    }
+
+
+    document
+    .getElementById("bookingForm")
+    .reset();
+
+
+    showConfirmation({
+
+        bookingId:bookingId,
+
+        username:currentUser,
+
+        tableName:table.tableName,
+
+        guests:guests,
+
+        date:date,
+
+        time:time
+
+    });
+
+}
+
+
+/* =========================================================
+   SHOW CONFIRMATION
+========================================================= */
+
+function showConfirmation(booking){
+
+    hideAllPages();
+
+    confirmationPage.style.display = "flex";
+
+
+    document.getElementById(
+        "confirmTable"
+    ).innerHTML =
+    `<strong>Table:</strong> ${escapeHTML(booking.tableName)}`;
+
+
+    document.getElementById(
+        "confirmUser"
+    ).innerHTML =
+    `<strong>Customer:</strong> ${escapeHTML(booking.username)}`;
+
+
+    document.getElementById(
+        "confirmGuests"
+    ).innerHTML =
+    `<strong>Guests:</strong> ${booking.guests}`;
+
+
+    document.getElementById(
+        "confirmDate"
+    ).innerHTML =
+    `<strong>Date:</strong> ${escapeHTML(booking.date)}`;
+
+
+    document.getElementById(
+        "confirmTime"
+    ).innerHTML =
+    `<strong>Time:</strong> ${escapeHTML(booking.time)}`;
+
+
+    document.getElementById(
+        "confirmBookingId"
+    ).innerHTML =
+    `<strong>Booking ID:</strong> ${escapeHTML(booking.bookingId)}`;
+
+
+    showToast(
+        "Your ChikZing table has been booked!"
+    );
+
+}
+
+
+/* =========================================================
+   CANCEL BOOKING
+========================================================= */
+
+function cancelBooking(bookingId){
+
+    const currentUser =
+    localStorage.getItem(
+        "chikzingCurrentUser"
+    );
+
+
+    const bookings = getBookings();
+
+
+    const booking =
+    bookings.find(
+        item =>
+        item.bookingId === bookingId &&
+        item.username === currentUser
+    );
+
+
+    if(!booking){
+
+        showToast(
+            "Booking not found."
+        );
+
+        return;
+
+    }
+
+
+    const confirmed =
+    confirm(
+        `Cancel your booking at ${booking.tableName} on ${booking.date} at ${booking.time}?`
+    );
+
+
+    if(!confirmed){
+
+        return;
+
+    }
+
+
+    const updatedBookings =
+    bookings.filter(
+        item =>
+        item.bookingId !== bookingId
+    );
+
+
+    saveBookings(updatedBookings);
+
+
+    loadTables();
+
+
+    showToast(
+        "Booking cancelled successfully."
+    );
+
+}
+
+
+/* =========================================================
+   BACK TO DASHBOARD
+========================================================= */
+
+function backToDashboard(){
+
+    confirmationPage.style.display =
+    "none";
+
+    dashboard.style.display =
+    "block";
+
+    loadTables();
+
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+function logout(){
+
+    localStorage.removeItem(
+        "chikzingCurrentUser"
+    );
+
+
+    showWebsite();
+
+
+    showToast(
+        "You have been logged out."
+    );
+
+}
+
+
+/* =========================================================
+   MENU FILTER
+========================================================= */
+
+document
+.querySelectorAll(".category-btn")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            document
+            .querySelectorAll(".category-btn")
+            .forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+
+            this.classList.add("active");
+
+
+            const category =
+            this.dataset.category;
+
+
+            document
+            .querySelectorAll(".food-item")
+            .forEach(item => {
+
+                if(
+                    category === "all" ||
+                    item.dataset.category === category
+                ){
+
+                    item.style.display =
+                    "block";
+
+                }else{
+
+                    item.style.display =
+                    "none";
+
+                }
+
+            });
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   ADD FOOD TO ORDER
+========================================================= */
+
+let selectedFoods = [];
+
+
+document
+.querySelectorAll(".add-order")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            const food =
+            this.dataset.food;
+
+
+            selectedFoods.push(food);
+
+
+            document
+            .getElementById("orderSelection")
+            .classList.remove("d-none");
+
+
+            document
+            .getElementById("orderText")
+            .innerText =
+            `${food} added! Your selection: ${selectedFoods.join(", ")}`;
+
+
+            showToast(
+                `${food} added to your selection.`
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+document
+.getElementById("contactForm")
+.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+
+        showToast(
+            "Thank you! Your message has been received."
+        );
+
+
+        this.reset();
+
+    }
+);
+
+
+/* =========================================================
+   EVENT LISTENERS
+========================================================= */
+
+document
+.getElementById("registerForm")
+.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+        registerUser();
+
+    }
+);
+
+
+document
+.getElementById("loginForm")
+.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+        login();
+
+    }
+);
+
+
+document
+.getElementById("bookingForm")
+.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+        confirmBooking();
+
+    }
+);
+
+
+document
+.getElementById("loginLink")
+.addEventListener(
+    "click",
+    function(event){
+
+        event.preventDefault();
+
+        showLogin();
+
+    }
+);
+
+
+document
+.getElementById("registerLink")
+.addEventListener(
+    "click",
+    function(event){
+
+        event.preventDefault();
+
+        showRegister();
+
+    }
+);
+
+
+document
+.getElementById("loginNavBtn")
+.addEventListener(
+    "click",
+    function(event){
+
+        event.preventDefault();
+
+        showLogin();
+
+    }
+);
+
+
+document
+.getElementById("bookingLoginBtn")
+.addEventListener(
+    "click",
+    function(){
+
+        const currentUser =
+        localStorage.getItem(
+            "chikzingCurrentUser"
+        );
+
+
+        if(currentUser){
+
+            openDashboard(
+                currentUser
+            );
+
+        }else{
+
+            showLogin();
+
+        }
+
+    }
+);
+
+
+document
+.getElementById("logoutBtn")
+.addEventListener(
+    "click",
+    logout
+);
+
+
+document
+.getElementById("backBtn")
+.addEventListener(
+    "click",
+    backToDashboard
+);
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        const button =
+        document.getElementById(
+            "backToTop"
+        );
+
+
+        if(window.scrollY > 400){
+
+            button.style.display =
+            "block";
+
+        }else{
+
+            button.style.display =
+            "none";
+
+        }
+
+    }
+);
+
+
+document
+.getElementById("backToTop")
+.addEventListener(
+    "click",
+    function(){
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(message){
+
+    const toastMessage =
+    document.getElementById("toastMessage");
+
+    toastMessage.innerText = message;
+
+    const toastElement =
+    document.getElementById("liveToast");
+
+    const toast =
+    bootstrap.Toast.getOrCreateInstance(
+        toastElement
+    );
+
+    toast.show();
+
+}
+
+
+/* =========================================================
+   INITIAL SCREEN
+========================================================= */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        showWebsite();
+
+    }
+);
+
+</script>
+
+</body>
+</html>
